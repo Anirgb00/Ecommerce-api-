@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use("/", routes);
 async function startConnection(){
     try{
-        await mongoose.connect('mongodb+srv://ksun42134:vDvtUiRvM7gH5ovq@cluster0.kkkcnog.mongodb.net/');
+        await mongoose.connect('');
         app.listen(PORT, (err) => {
             if(err){
                 throw new Error(err);
