@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const mongoose = require('mongoose');
 const routes = require('./router/index');
-const PORT = 8000 || process.env.PORT;
+const PORT = 8000 ;
 const app = express();
 
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use("/", routes);
 async function startConnection(){
     try{
-        await mongoose.connect(process.env.MongoDBURL);
+        await mongoose.connect('mongodb+srv://ksun42134:vDvtUiRvM7gH5ovq@cluster0.kkkcnog.mongodb.net/');
         app.listen(PORT, (err) => {
             if(err){
                 throw new Error(err);
